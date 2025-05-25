@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shifa Sabreen Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header/Nav -->
+  <!-- Header -->
   <header>
     <nav>
       <h1>Shifa Sabreen</h1>
@@ -26,56 +26,117 @@
   <!-- Home -->
   <section id="home" class="section">
     <h2>Welcome to My Portfolio</h2>
-    <p>Discover my world of code, creativity, and ambition.</p>
+    <p>Discover my journey through code, design, and innovation.welcome to my portfolio! It’s such a pleasure to have you here and an honour to introduce my work to you, so thank you for reading! </p>
   </section>
 
   <!-- About -->
   <section id="about" class="section">
     <h2>About Me</h2>
-    <img src="images/me.jpg" alt="My Photo" class="profile-img">
-    <p>Hi, I’m Shifa Sabreen, a BCA student passionate about web development, software design, and creativity. I’ve done internships at DLK and JPMorgan, and I love building user-focused solutions.</p>
+
+    <p>Hi, I’m Shifa Sabreen, a final year BCA student passionate about web development, design, and building user-focused digital experiences. I have completed internships at DLK and JPMorgan, and have developed projects using Java, MySQL, and more.</p>
   </section>
 
   <!-- Skills -->
   <section id="skills" class="section">
     <h2>Skills</h2>
-    <ul>
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>Java & Advanced Java</li>
-      <li>Python (Basics)</li>
-      <li>MySQL</li>
-      <li>Web Development</li>
-    </ul>
+ <div class="skills-container">
+ <div class="skill-box">HTML</div>
+<div class="skill-box">CSS</div>
+<div class="skill-box">JavaScript</div>
+<div class="skill-box">Python</div>
+<div class="skill-box">C++</div>
+</div>
   </section>
+
+
 
   <!-- Projects -->
   <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Hospital Management System</h3>
-      <p>A Java/J2EE-based application designed for doctors to manage appointments and records. Uses MySQL and Tomcat.</p>
-      <img src="images/project1.png" alt="Hospital Project">
-    </div>
-    <!-- Add more projects as needed -->
-  </section>
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>AI-Powered Portfolio Website</h3>
+    <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript, featuring smooth scrolling and interactive elements.</p>
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="AI Portfolio Website">
+  </div>
+
+  <div class="project">
+    <h3>Web Development with AI Assistance</h3>
+    <p>Created a web app integrating AI-based chat and recommendation systems for enhanced user engagement.</p>
+    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="AI Web Development">
+  </div>
+
+  <div class="project">
+    <h3>AI Image Generator Interface</h3>
+    <p>Developed a frontend interface to interact with AI image generation APIs, allowing users to create custom art on the fly.</p>
+    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=80" alt="AI Image Generator">
+  </div>
+</section>
 
   <!-- Achievements -->
+ <section id="achievements" class="section">
+  <h2>Achievements & Certificates</h2>
+  <div class="achievements-container">
+    <div class="achievement-card" onclick="showModal('DLK Web Design Internship')">
+      DLK Web Design Internship
+    </div>
+    <div class="achievement-card" onclick="showModal('JPMorgan Web App Internship')">
+      JPMorgan Web App Internship
+    </div>
+    <div class="achievement-card" onclick="showModal('Ramp Walk Winner - College Fest')">
+      Ramp Walk Winner - College Fest
+    </div>
+  </div>
+</section>
   <section id="achievements" class="section">
-    <h2>Achievements & Certificates</h2>
-    <ul>
-      <li><a href="certificates/dlk_internship.pdf" target="_blank">DLK Web Design Internship</a></li>
-      <li><a href="certificates/jpmorgan_internship.pdf" target="_blank">JPMorgan Web App Development</a></li>
-      <li><a href="certificates/ramp_walk_award.pdf" target="_blank">Ramp Walk Winner</a></li>
-    </ul>
-  </section>
+  <h2>Achievements</h2>
+  <div class="achievements-container">
+    <div class="achievement-card" onclick="openModal('modal1')">Best Web Design Award - 2024</div>
+    <div class="achievement-card" onclick="openModal('modal2')">AI Innovation Finalist - TechCon</div>
+    <div class="achievement-card" onclick="openModal('modal3')">Top Performer - Internship at JPMorgan</div>
+  </div>
+
+  <!-- Modals -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h3>Best Web Design Award - 2024</h3>
+      <p>Received for developing a responsive and modern website during the college tech fest.</p>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h3>AI Innovation Finalist - TechCon</h3>
+      <p>Selected as one of the top 5 teams for proposing an AI-powered mental health chatbot.</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h3>Top Performer - Internship at JPMorgan</h3>
+      <p>Recognized for excellent performance and contribution to a web application development project.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Modal Pop-up -->
+<div id="achievementModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle">Achievement Title</h3>
+    <p>This certificate showcases my participation and success in this area.</p>
+  </div>
+</div>
 
   <!-- Contact -->
   <section id="contact" class="section">
     <h2>Contact Me</h2>
-    <p>Email: shifa@example.com</p>
-    <p>Phone: +91-XXXXXXXXXX</p>
-    <a href="resume.pdf" download>Download Resume</a>
+    <p>Email: shifasabreen31@gmail.com</p>
+    <p>Phone: +91-7827323821</p>
   </section>
 
   <!-- Footer -->
@@ -84,4 +145,42 @@
   </footer>
 
 </body>
+  <--<script>
+  function showModal(title) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("achievementModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("achievementModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("achievementModal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  };
+</script>-->
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+  // Close modal on outside click
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  };
+</script>
+
+
 </html>
